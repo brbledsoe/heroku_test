@@ -1,0 +1,22 @@
+<html>
+  <head>
+    
+  </head>
+  <body ng-app="heroku_test" ng-controller="MainCtrl">
+
+    <h1>{{test}}</h1>
+    <h1>{{testFact}}</h1>
+
+    <input ng-model="user.name" placeholder="username">
+    <button ng-click="addUser()">Submit</button>
+
+    <div ng-repeat="user in users">
+      {{user}}
+    </div>
+
+    <script src="../angular/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="factory.js"></script>
+    <script src="controller.js"></script>
+  </body>
+</html>
