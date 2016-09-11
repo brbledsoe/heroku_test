@@ -3,7 +3,7 @@ var app = express();
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 
-mongoose.connect('mongodb://localhost/heroku_test');
+mongoose.connect(process.env.MONGOLAB_CYAN_URI || 'mongodb://localhost/heroku_test');
 
 var User = require('./models/user');
 
@@ -29,7 +29,7 @@ app.post("/addUser", function(req, res){
 
 
 
-app.listen(8080);
+app.listen(process.env.PORT || '4000');
 
 
 
